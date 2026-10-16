@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sejarah Romawi: Dari Awal Berdirinya hingga Runtuhnya Romawi Barat</title>
+<meta name="description" content="Kronologi sejarah Romawi dari pendirian tradisional kota pada 753 SM hingga jatuhnya Romawi Barat pada 476 M.">
+<script>document.documentElement.classList.add('js');</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        marble: '#F5F3EF',
+        travertine: '#EAE5D9',
+        crimson: '#800020',
+        tyrian: '#6A0DAD',
+        bronze: '#C5A059',
+        charcoal: '#222222'
+      },
+      fontFamily: {
+        display: ['Cinzel', 'serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+        body: ['Lora', 'serif'],
+        ui: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  body {
+    background-color: #F5F3EF;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(197,160,89,.07), transparent 50%),
+      radial-gradient(ellipse at 80% 60%, rgba(128,0,32,.04), transparent 55%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .33  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    color: #222222;
+    font-family: 'Lora', serif;
+  }
+
+  /* Prasasti batu: kartu */
+  .inscription {
+    background: #EAE5D9;
+    border: 4px solid #222222;
+    box-shadow:
+      inset 0 0 0 3px #F5F3EF,
+      inset 0 0 0 5px #C5A059,
+      7px 7px 0 rgba(34,34,34,.22);
+    position: relative;
+  }
+  .inscription-dark {
+    background: #222222;
+    color: #EAE5D9;
+    border: 4px solid #C5A059;
+    box-shadow: inset 0 0 0 3px #222222, inset 0 0 0 5px rgba(197,160,89,.6), 7px 7px 0 rgba(0,0,0,.3);
+  }
+
+  /* Spanduk kain */
+  .banner {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 2px, transparent 2px 7px),
+      linear-gradient(180deg, #800020, #5e0018);
+  }
+  .banner-tyrian {
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 2px, transparent 2px 7px),
+      linear-gradient(180deg, #6A0DAD, #4a0879);
+  }
+
+  /* Kolom Romawi sebagai pembatas */
+  .colonnade { position: relative; height: 84px; }
+  .colonnade .entab {
+    position: absolute; top: 0; left: 0; right: 0; height: 14px;
+    background: linear-gradient(180deg, #F5F3EF, #D8D1BF);
+    border-top: 3px solid #C5A059; border-bottom: 2px solid #9d9478;
+  }
+  .colonnade .base {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 12px;
+    background: linear-gradient(180deg, #D8D1BF, #bdb59f);
+    border-top: 2px solid #9d9478; border-bottom: 3px solid #C5A059;
+  }
+  .colonnade .shafts {
+    position: absolute; top: 14px; bottom: 12px; left: 0; right: 0;
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 1px, transparent 1px 6px),
+      linear-gradient(90deg, #bfb7a1, #F5F3EF 35%, #EAE5D9 60%, #b2aa93);
+    -webkit-mask-image: repeating-linear-gradient(90deg, transparent 0 16px, #000 16px 60px, transparent 60px 76px);
+            mask-image: repeating-linear-gradient(90deg, transparent 0 16px, #000 16px 60px, transparent 60px 76px);
+  }
+  .colonnade-dark .entab { background: linear-gradient(180deg, #3a3a3a, #222); border-color: #C5A059; }
+  .colonnade-dark .base  { background: linear-gradient(180deg, #2b2b2b, #151515); border-color: #C5A059; }
+  .colonnade-dark .shafts {
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,.35) 0 1px, transparent 1px 6px),
+      linear-gradient(90deg, #4a4a4a, #8a8470 35%, #6f6a58 60%, #3a3a3a);
+  }
+
+  /* Timeline */
+  .tl-line {
+    background: linear-gradient(180deg, #C5A059, #800020 50%, #C5A059);
+  }
+  .tl-dot {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #800020; border: 4px solid #C5A059;
+    box-shadow: 0 0 0 4px #F5F3EF;
+  }
+  .year-plate {
+    background: linear-gradient(180deg, #d7b66f, #a98440);
+    color: #222; font-family: 'Cinzel', serif; font-weight: 700;
+    letter-spacing: .08em; border: 2px solid #222;
+    box-shadow: 2px 2px 0 rgba(34,34,34,.35);
+  }
+
+  /* Animasi muncul */
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.show { opacity: 1; transform: none; }
+
+  /* Hero */
+  .hero-bg {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(128,0,32,.55), transparent 60%),
+      radial-gradient(ellipse at 50% 100%, rgba(106,13,173,.25), transparent 60%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 2px, transparent 2px 90px),
+      #1a1a1a;
+  }
+  .carved {
+    font-family: 'Cinzel', serif;
+    color: #EAE5D9;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.8), 0 2px 0 rgba(197,160,89,.45), 0 0 30px rgba(197,160,89,.15);
+  }
+  .dropcap::first-letter {
+    font-family: 'Cinzel', serif; font-weight: 900; color: #800020;
+    float: left; font-size: 3.4rem; line-height: .85; padding: .25rem .5rem 0 0;
+  }
+  ::selection { background: #800020; color: #F5F3EF; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header class="sticky top-0 z-50 bg-charcoal border-b-4 border-bronze shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <a href="#atas" class="flex items-center gap-3 group">
+      <span class="flex items-center justify-center w-11 h-11 bg-crimson border-2 border-bronze font-display font-black text-bronze text-sm tracking-tight">SPQR</span>
+      <span class="hidden sm:block leading-tight">
+        <span class="block font-display text-travertine text-sm tracking-[.25em]">SENATVS POPVLVSQVE</span>
+        <span class="block font-display text-bronze text-xs tracking-[.35em]">ROMANVS</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1 font-display text-[13px] tracking-widest text-travertine">
+      <a class="px-3 py-2 hover:text-bronze transition" href="#bab-1">I · Asal-usul</a>
+      <a class="px-3 py-2 hover:text-bronze transition" href="#bab-2">II · Republik</a>
+      <a class="px-3 py-2 hover:text-bronze transition" href="#bab-3">III · Principat</a>
+      <a class="px-3 py-2 hover:text-bronze transition" href="#bab-4">IV · Kemunduran</a>
+      <a class="px-3 py-2 hover:text-bronze transition" href="#bab-5">V · Keruntuhan</a>
+      <a class="px-3 py-2 hover:text-bronze transition" href="#kronologi">Kronologi</a>
+    </nav>
+    <button id="menuBtn" class="lg:hidden text-bronze border-2 border-bronze px-3 py-1 font-display text-sm tracking-widest" aria-label="Buka menu" aria-expanded="false">MENU</button>
+  </div>
+  <nav id="mobileNav" class="hidden lg:hidden bg-[#1a1a1a] border-t border-bronze/40 font-display text-sm tracking-widest text-travertine">
+    <a class="block px-6 py-3 border-b border-white/10 hover:bg-crimson" href="#bab-1">I · Asal-usul</a>
+    <a class="block px-6 py-3 border-b border-white/10 hover:bg-crimson" href="#bab-2">II · Republik &amp; Ekspansi</a>
+    <a class="block px-6 py-3 border-b border-white/10 hover:bg-crimson" href="#bab-3">III · Principat</a>
+    <a class="block px-6 py-3 border-b border-white/10 hover:bg-crimson" href="#bab-4">IV · Kemunduran</a>
+    <a class="block px-6 py-3 border-b border-white/10 hover:bg-crimson" href="#bab-5">V · Keruntuhan Barat</a>
+    <a class="block px-6 py-3 hover:bg-crimson" href="#kronologi">Kronologi Ringkas</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="atas" class="hero-bg relative overflow-hidden text-travertine">
+  <div class="max-w-5xl mx-auto px-6 pt-16 pb-10 sm:pt-24 text-center">
+    <p class="font-display text-bronze tracking-[.5em] text-xs sm:text-sm mb-6">ANNO AB VRBE CONDITA I — MCCXXIX</p>
+    <h1 class="carved font-black leading-[1.05] text-5xl sm:text-7xl lg:text-8xl tracking-wide">
+      SEJARAH<br>ROMAWI
+    </h1>
+    <div class="mx-auto my-7 flex items-center justify-center gap-4 text-bronze">
+      <span class="h-px w-16 sm:w-32 bg-bronze"></span>
+      <span class="font-display text-lg">✦</span>
+      <span class="h-px w-16 sm:w-32 bg-bronze"></span>
+    </div>
+    <p class="font-serif italic text-2xl sm:text-3xl text-travertine/95 max-w-3xl mx-auto leading-snug">
+      Dari permukiman di Bukit Palatine hingga pemakzulan Romulus Augustulus di Ravenna
+    </p>
+    <p class="font-body text-travertine/75 max-w-2xl mx-auto mt-6 leading-relaxed">
+      Selama sekitar dua belas abad, sebuah kota Latium tengah berubah menjadi monarki, republik, lalu
+      kekaisaran yang mengelilingi Laut Tengah. Halaman ini menyusun rangkaian peristiwa itu secara berurutan,
+      berikut tokoh, angka, dan sumber yang menopangnya.
+    </p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3 font-display text-sm tracking-widest">
+      <a href="#bab-1" class="px-6 py-3 bg-crimson border-2 border-bronze text-travertine hover:bg-[#9a0027] transition">MULAI DARI AWAL</a>
+      <a href="#kronologi" class="px-6 py-3 border-2 border-bronze text-bronze hover:bg-bronze hover:text-charcoal transition">LIHAT KRONOLOGI</a>
+    </div>
+  </div>
+
+  <!-- Spanduk kain -->
+  <div class="max-w-5xl mx-auto px-6 pb-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+    <div class="banner text-center pt-5 pb-12 px-2 border-t-4 border-bronze">
+      <div class="font-display font-black text-2xl sm:text-3xl text-bronze">753 SM</div>
+      <div class="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-travertine/90 mt-1">Pendirian tradisional kota</div>
+    </div>
+    <div class="banner banner-tyrian text-center pt-5 pb-12 px-2 border-t-4 border-bronze">
+      <div class="font-display font-black text-2xl sm:text-3xl text-bronze">509 SM</div>
+      <div class="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-travertine/90 mt-1">Republik dibentuk</div>
+    </div>
+    <div class="banner text-center pt-5 pb-12 px-2 border-t-4 border-bronze">
+      <div class="font-display font-black text-2xl sm:text-3xl text-bronze">27 SM</div>
+      <div class="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-travertine/90 mt-1">Augustus, Principat</div>
+    </div>
+    <div class="banner banner-tyrian text-center pt-5 pb-12 px-2 border-t-4 border-bronze">
+      <div class="font-display font-black text-2xl sm:text-3xl text-bronze">476 M</div>
+      <div class="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-travertine/90 mt-1">Romawi Barat berakhir</div>
+    </div>
+  </div>
+  <div class="colonnade colonnade-dark"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+</section>
+
+<!-- ============ PENGANTAR ============ -->
+<section class="max-w-4xl mx-auto px-6 py-14">
+  <div class="inscription p-8 sm:p-10 reveal">
+    <p class="font-display text-crimson text-xs tracking-[.4em] mb-3">PRAEFATIO · CATATAN PEMBACA</p>
+    <p class="font-body leading-8 dropcap text-[17px]">
+      Sumber tertulis tentang Roma sebelum abad ke-3 SM sebagian besar ditulis berabad-abad setelah peristiwanya
+      terjadi. Livius menulis pada masa Augustus, Plutarkhos pada akhir abad ke-1 M, dan Dionysios dari Halikarnassos
+      pada dekade 20-an SM. Tanggal seperti 753 SM dan 509 SM berasal dari penyusunan kronologi oleh Marcus Terentius Varro,
+      bukan dari catatan sezaman. Karena itu, bab pertama memisahkan tradisi dari temuan arkeologi, dan penanggalan awal
+      dalam halaman ini ditandai sebagai tradisional.
+    </p>
+  </div>
+</section>
+
+<!-- ============ BAB I ============ -->
+<section id="bab-1" class="scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12">
+      <div class="banner w-28 shrink-0 text-center pt-5 pb-12 border-t-4 border-bronze">
+        <div class="font-display text-travertine text-xs tracking-widest">CAPVT</div>
+        <div class="font-display font-black text-4xl text-bronze">I</div>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-display text-crimson text-xs tracking-[.4em]">753 – 287 SM</p>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-charcoal leading-tight mt-1">Awal Berdirinya: Monarki dan Lahirnya Republik</h2>
+        <p class="font-serif italic text-xl text-charcoal/75 mt-3 max-w-3xl">Tujuh raja, satu pengusiran, dan konflik panjang antara patrisian dan plebeian.</p>
+      </div>
+    </div>
+
+    <div class="relative pb-6">
+      <div class="tl-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"></div>
+
+      <!-- 1 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">753 SM · TRADISI</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Romulus dan Remus</h3>
+          <p class="font-body leading-7 mt-2">
+            Menurut tradisi, Romulus dan Remus adalah putra Rhea Silvia, keturunan Aeneas dari Troya, dan dewa Mars.
+            Keduanya dibuang di tepi Sungai Tiber, disusui seekor serigala betina, lalu dibesarkan oleh gembala Faustulus.
+            Setelah pertengkaran soal lokasi dan pertanda burung, Romulus membunuh Remus dan menamai kota itu dengan namanya sendiri.
+            Varro menetapkan tanggal pendirian pada 21 April 753 SM, dan angka itu menjadi titik nol penanggalan <em>ab urbe condita</em>.
+          </p>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">ABAD KE-9 – 8 SM · ARKEOLOGI</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Desa-desa di Tujuh Bukit</h3>
+          <p class="font-body leading-7 mt-2">
+            Penggalian di Palatine dan Forum menunjukkan kelompok kampung berpondok kayu dan lahan pemakaman dari awal Zaman Besi.
+            Penghuninya adalah komunitas berbahasa Latin, dengan kemungkinan pengaruh Sabin dari perbukitan timur laut.
+            Lokasi di tepi Tiber, dekat titik penyeberangan sungai dan jalur garam, memberi kota itu keuntungan dagang.
+            Bukti arkeologi tidak mengonfirmasi tokoh Romulus, tetapi sesuai dengan perkiraan bahwa urbanisasi berlangsung bertahap pada abad ke-8 hingga ke-6 SM.
+          </p>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">753 – 509 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Tujuh Raja Roma</h3>
+          <p class="font-body leading-7 mt-2">
+            Daftar tradisional memuat Romulus, Numa Pompilius, Tullus Hostilius, Ancus Marcius, Tarquinius Priscus, Servius Tullius,
+            dan Tarquinius Superbus. Tiga raja terakhir berasal dari lingkungan Etruria. Priscus dikaitkan dengan pembangunan Circus Maximus,
+            Servius Tullius dengan pembagian warga ke dalam kelas-kelas berdasarkan kekayaan (<em>centuriae</em>) untuk keperluan militer dan pemungutan suara,
+            dan Superbus dengan Kuil Jupiter Optimus Maximus di Capitolium. Saluran pembuangan Cloaca Maxima juga masuk dalam tradisi masa ini.
+          </p>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">509 SM · TRADISIONAL</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Pengusiran Tarquinius dan Dua Konsul</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Kisah Livius mengaitkan jatuhnya monarki dengan pemerkosaan Lucretia oleh putra Superbus dan kemarahan Lucius Junius Brutus.
+            Keluarga Tarquinius diusir, dan kekuasaan tertinggi dipegang dua konsul yang dipilih untuk satu tahun, masing-masing dapat memveto yang lain.
+            Gelar <em>rex</em> menjadi tabu politik di Roma selama berabad-abad. Peneliti modern menduga peralihan itu berlangsung lebih lambat dan lebih rumit daripada satu malam pemberontakan.
+          </p>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">494 – 287 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Konflik Para Ordo</h3>
+          <p class="font-body leading-7 mt-2">
+            Kaum plebeian menuntut perlindungan dari hutang dan akses ke jabatan. Pada 494 SM mereka melakukan <em>secessio</em> pertama ke Mons Sacer
+            dan memperoleh tribun plebs, pejabat yang tubuhnya tak boleh diganggu. Hukum Dua Belas Tabel (451–450 SM) menuliskan aturan perdata dan pidana
+            agar tidak lagi bergantung pada tafsir pontifeks patrisian. <em>Leges Liciniae Sextiae</em> (367 SM) membuka salah satu kursi konsul bagi plebeian,
+            dan <em>Lex Hortensia</em> (287 SM) menjadikan keputusan majelis plebeian mengikat seluruh warga.
+          </p>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">SEKITAR 390 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Kekalahan di Allia dan Penjarahan oleh Galia</h3>
+          <p class="font-body leading-7 mt-2">
+            Pasukan Galia di bawah Brennus mengalahkan tentara Romawi di Sungai Allia lalu menduduki kota, kecuali Capitolium.
+            Roma membayar tebusan emas. Tembok baru dibangun pada dekade berikutnya, dan pengalaman ini membentuk kewaspadaan Romawi terhadap
+            ancaman dari utara. Bencana ini sekaligus menjadi titik tolak kisah kebangkitan di bawah Marcus Furius Camillus.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="colonnade my-16"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+
+<!-- ============ BAB II ============ -->
+<section id="bab-2" class="scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12">
+      <div class="banner banner-tyrian w-28 shrink-0 text-center pt-5 pb-12 border-t-4 border-bronze">
+        <div class="font-display text-travertine text-xs tracking-widest">CAPVT</div>
+        <div class="font-display font-black text-4xl text-bronze">II</div>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-display text-crimson text-xs tracking-[.4em]">343 – 44 SM</p>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-charcoal leading-tight mt-1">Republik dan Ekspansi Militer</h2>
+        <p class="font-serif italic text-xl text-charcoal/75 mt-3 max-w-3xl">Senat, legiun, tiga perang melawan Kartago, dan jenderal-jenderal yang mengalahkan konstitusi.</p>
+      </div>
+    </div>
+
+    <!-- Struktur pemerintahan & legiun -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="inscription p-6 reveal">
+        <p class="font-display text-crimson text-xs tracking-[.35em]">SENATVS · MAGISTRATVS</p>
+        <h3 class="font-display font-bold text-2xl mt-2">Tata Negara Republik</h3>
+        <p class="font-body leading-7 mt-3">
+          Republik tidak memiliki konstitusi tertulis tunggal. Kekuasaan dibagi antara magistrat yang dipilih setahun, Senat yang beranggotakan mantan pejabat,
+          dan majelis rakyat. Karier politik mengikuti urutan jabatan yang disebut <em>cursus honorum</em>.
+        </p>
+        <ul class="font-body mt-4 space-y-2 text-[15px] leading-6">
+          <li><strong class="text-crimson">Konsul (2):</strong> memegang <em>imperium</em>, memimpin tentara dan sidang Senat.</li>
+          <li><strong class="text-crimson">Praetor:</strong> hakim, dapat memegang komando militer dan gubernur provinsi.</li>
+          <li><strong class="text-crimson">Quaestor dan Aedil:</strong> urusan keuangan, jalan, pasar, serta penyelenggaraan pesta rakyat.</li>
+          <li><strong class="text-crimson">Tribun plebs:</strong> hak veto atas tindakan magistrat dan perlindungan terhadap warga.</li>
+          <li><strong class="text-crimson">Diktator:</strong> jabatan darurat maksimal enam bulan, dipakai terakhir secara normal pada 202 SM.</li>
+          <li><strong class="text-crimson">Senat:</strong> sekitar 300 anggota pada pertengahan Republik, 600 pada masa Sulla, dan 900 pada masa Caesar.</li>
+        </ul>
+      </div>
+      <div class="inscription inscription-dark p-6 reveal">
+        <p class="font-display text-bronze text-xs tracking-[.35em]">LEGIO · EXERCITVS</p>
+        <h3 class="font-display font-bold text-2xl mt-2 text-bronze">Legiun Romawi</h3>
+        <p class="font-body leading-7 mt-3 text-travertine/90">
+          Pada pertengahan Republik, legiun berformasi manipel yang lentur dan disusun menurut kelas harta. Setelah reformasi Gaius Marius (sekitar 107 SM),
+          warga tanpa tanah (<em>proletarii</em>) direkrut dengan gaji dan janji tanah pensiun. Tentara menjadi pasukan profesional,
+          tetapi kesetiaannya bergeser dari negara kepada jenderal yang membayar dan memberi lahan.
+        </p>
+        <ul class="font-body mt-4 space-y-2 text-[15px] leading-6 text-travertine/90">
+          <li><strong class="text-bronze">Ukuran:</strong> sekitar 4.800–5.200 prajurit, dibagi menjadi 10 kohort.</li>
+          <li><strong class="text-bronze">Unit dasar:</strong> <em>centuria</em> berisi sekitar 80 orang di bawah seorang centurio.</li>
+          <li><strong class="text-bronze">Persenjataan:</strong> pedang <em>gladius</em>, lembing <em>pilum</em>, perisai <em>scutum</em>.</li>
+          <li><strong class="text-bronze">Disiplin:</strong> kamp berparit dan berpagar (<em>castra</em>) didirikan setiap malam saat berbaris.</li>
+          <li><strong class="text-bronze">Insinyur:</strong> prajurit membangun jalan, jembatan, dan benteng, bukan hanya bertempur.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="relative pb-6">
+      <div class="tl-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"></div>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">343 – 264 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Penaklukan Semenanjung Italia</h3>
+          <p class="font-body leading-7 mt-2">
+            Tiga Perang Samnite menyingkirkan penguasa bukit di Italia tengah, dan kemenangan di Sentinum (295 SM) mematahkan koalisi Samnite, Etruria, dan Galia.
+            Raja Pyrrhus dari Epirus dikalahkan setelah kemenangan mahal di Asculum (279 SM), dan Tarentum jatuh pada 272 SM.
+            Roma tidak menggabungkan semua wilayah secara langsung. Komunitas yang ditaklukkan menjadi sekutu (<em>socii</em>) yang wajib menyediakan pasukan,
+            sehingga cadangan tenaga manusia Roma jauh melampaui jumlah penduduk kotanya.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">264 – 241 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Perang Punic Pertama</h3>
+          <p class="font-body leading-7 mt-2">
+            Sengketa atas Messana di Sisilia menyeret Roma ke perang melawan Kartago, kekuatan laut terbesar di Mediterania barat.
+            Roma membangun armada dari nol dan memakai jembatan kait <em>corvus</em> untuk mengubah pertempuran laut menjadi pertarungan jarak dekat.
+            Kemenangan di Mylae (260 SM) dan Kepulauan Aegates (241 SM) memaksa Kartago meminta damai. Sisilia menjadi provinsi pertama Roma di luar Italia,
+            dan Kartago wajib membayar ganti rugi besar.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">218 – 201 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Perang Punic Kedua: Hannibal</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Hannibal Barca menyeberangi Pegunungan Alpen dan mengalahkan Roma di Trebia (218), Danau Trasimene (217), dan Cannae (216 SM).
+            Di Cannae, penyergapan dari dua sisi menewaskan puluhan ribu prajurit Romawi dalam satu hari. Roma tidak berunding.
+            Strategi Fabius Maximus menghindari pertempuran terbuka, sementara sebagian besar sekutu Italia tetap setia.
+            Publius Cornelius Scipio memindahkan perang ke Afrika dan mengalahkan Hannibal di Zama pada 202 SM.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">149 – 146 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Perang Punic Ketiga dan Kehancuran Kartago</h3>
+          <p class="font-body leading-7 mt-2">
+            Cato Tua dikenal menutup pidato-pidatonya dengan seruan agar Kartago dihancurkan. Setelah pengepungan tiga tahun,
+            Scipio Aemilianus merebut kota itu pada 146 SM, membakarnya, dan menjual penduduknya sebagai budak. Wilayahnya menjadi provinsi Afrika.
+            Pada tahun yang sama, Lucius Mummius menghancurkan Korintus di Yunani. Setelah dua peristiwa ini, tidak ada kekuatan Mediterania yang mampu menandingi Roma.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">133 – 79 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Krisis Agraria, Marius, dan Sulla</h3>
+          <p class="font-body leading-7 mt-2">
+            Tiberius Gracchus (tewas 133 SM) dan adiknya Gaius (tewas 121 SM) mengusulkan pembagian tanah publik kepada warga miskin, dan keduanya dibunuh oleh lawan politik di Senat.
+            Kekerasan menjadi alat politik. Marius memegang tujuh konsulat, lalu Lucius Cornelius Sulla pada 88 SM memimpin legiun memasuki Roma sendiri,
+            sesuatu yang belum pernah dilakukan komandan Romawi. Sulla menjadi diktator pada 82–79 SM dan menerbitkan daftar proskripsi yang menyita harta lawan-lawannya.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">58 – 50 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Caesar di Galia</h3>
+          <p class="font-body leading-7 mt-2">
+            Gaius Julius Caesar, anggota triumvirat bersama Pompeius dan Crassus sejak 60 SM, memerintah Galia selama delapan tahun.
+            Ia menulis kampanyenya dalam <em>Commentarii de Bello Gallico</em>. Pertempuran penentu terjadi di Alesia pada 52 SM,
+            ketika pasukannya mengepung Vercingetorix sambil menahan pasukan bantuan Galia dari luar. Galia di luar Narbonensis menjadi wilayah Romawi,
+            dan Caesar memperoleh pasukan veteran yang setia kepadanya.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">49 – 44 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Rubicon, Pharsalus, dan Idus Martiae</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Senat menuntut Caesar membubarkan pasukan. Pada Januari 49 SM ia menyeberangi Sungai Rubicon dengan bersenjata, membuka perang saudara melawan Pompeius.
+            Kemenangan di Pharsalus (48 SM) diikuti kampanye di Mesir, Afrika, dan Hispania. Pada awal 44 SM ia ditetapkan diktator seumur hidup.
+            Pada 15 Maret 44 SM, sekelompok senator yang dipimpin Marcus Junius Brutus dan Gaius Cassius menikamnya di Kuria Pompeius.
+            Pembunuhan itu tidak memulihkan Republik, tetapi mengawali satu dekade perang saudara lagi.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="colonnade my-16"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+
+<!-- ============ BAB III ============ -->
+<section id="bab-3" class="scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12">
+      <div class="banner w-28 shrink-0 text-center pt-5 pb-12 border-t-4 border-bronze">
+        <div class="font-display text-travertine text-xs tracking-widest">CAPVT</div>
+        <div class="font-display font-black text-4xl text-bronze">III</div>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-display text-crimson text-xs tracking-[.4em]">44 SM – 212 M</p>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-charcoal leading-tight mt-1">Transisi ke Kekaisaran dan Pax Romana</h2>
+        <p class="font-serif italic text-xl text-charcoal/75 mt-3 max-w-3xl">Augustus mempertahankan bentuk Republik sambil memusatkan kekuasaan di satu tangan.</p>
+      </div>
+    </div>
+
+    <div class="relative pb-6">
+      <div class="tl-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"></div>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">43 – 30 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Triumvirat Kedua dan Aktium</h3>
+          <p class="font-body leading-7 mt-2">
+            Ahli waris Caesar, Gaius Octavius (Octavianus), membentuk triumvirat dengan Marcus Antonius dan Lepidus pada 43 SM.
+            Proskripsi mereka menewaskan Cicero. Setelah mengalahkan para pembunuh Caesar di Filipi (42 SM), pembagian wilayah antara Octavianus dan Antonius memburuk.
+            Antonius bersekutu dengan Cleopatra VII dari Mesir, dan armadanya dikalahkan Agrippa di Aktium pada 2 September 31 SM.
+            Mesir dianeksasi pada 30 SM dan perbendaharaan Ptolemaik pindah ke tangan Octavianus.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">16 JANUARI 27 SM</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Augustus dan Principat</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Octavianus menyerahkan kekuasaan luar biasanya kepada Senat dan menerima gelar <em>Augustus</em> serta provinsi-provinsi perbatasan yang menampung sebagian besar legiun.
+            Ia menyebut dirinya <em>princeps</em>, warga pertama, bukan raja atau diktator. Magistrat, Senat, dan pemilihan tetap berjalan, tetapi keputusan akhir ada padanya.
+            Ia mereformasi tentara menjadi pasukan tetap sekitar 28 legiun, membentuk Garda Praetorian, dinas pemadam kebakaran, dan perbendaharaan pensiun militer,
+            serta memerintah selama 41 tahun hingga wafat pada 14 M. Autobiografinya, <em>Res Gestae Divi Augusti</em>, dipahat di depan makamnya.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">9 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Bencana Hutan Teutoburg</h3>
+          <p class="font-body leading-7 mt-2">
+            Arminius, perwira Germania yang pernah bertugas di tentara Romawi, menjebak tiga legiun (XVII, XVIII, XIX) pimpinan Publius Quinctilius Varus di hutan Germania.
+            Ketiganya dimusnahkan. Augustus dilaporkan sangat terpukul, dan Roma tidak lagi berusaha menjadikan wilayah di timur Rhein sebagai provinsi.
+            Sungai Rhein dan Donau menjadi garis batas utara selama berabad-abad.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">27 SM – 180 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Pax Romana</h3>
+          <p class="font-body leading-7 mt-2">
+            Istilah ini merujuk pada sekitar dua abad ketika perang saudara besar jarang terjadi dan Mediterania berada di bawah satu pemerintahan.
+            Bajak laut ditekan, perdagangan laut berkembang, dan jaringan jalan batu yang panjangnya puluhan ribu kilometer menghubungkan provinsi.
+            Populasi kekaisaran diperkirakan 50 hingga 70 juta jiwa. Perdamaian itu relatif, karena perang perbatasan, pemberontakan Yahudi (66–73 M dan 132–135 M),
+            dan kerusuhan suksesi tetap terjadi. Bagi penduduk provinsi yang ditaklukkan, taruhannya adalah pajak dan kehadiran garnisun.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">14 – 96 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Julio-Claudian, Tahun Empat Kaisar, dan Flavian</h3>
+          <p class="font-body leading-7 mt-2">
+            Tiberius, Caligula, Claudius, dan Nero meneruskan garis keluarga Augustus hingga Nero bunuh diri pada 68 M.
+            Tahun berikutnya, Galba, Otho, Vitellius, dan Vespasianus saling berebut tahta, dan Vespasianus menang. Dinasti Flavian membangun Amfiteater Flavian (Colosseum),
+            diresmikan Titus pada 80 M, setahun setelah letusan Vesuvius mengubur Pompeii dan Herculaneum. Domitianus, kaisar terakhir dinasti ini, dibunuh pada 96 M.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">96 – 180 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Lima Kaisar yang Baik</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Nerva, Trajanus, Hadrianus, Antoninus Pius, dan Marcus Aurelius memerintah secara berturut-turut melalui adopsi, bukan keturunan langsung.
+            Trajanus menaklukkan Dacia (106 M) dan, pada 117 M, kekaisaran mencapai luas terbesarnya sekitar lima juta kilometer persegi.
+            Hadrianus memadatkan perbatasan dan mendirikan tembok di Britania mulai 122 M. Marcus Aurelius menghabiskan sebagian besar masa kekuasaannya di perbatasan Donau
+            melawan Marcomanni dan menulis <em>Meditations</em>. Penerus kandungnya, Commodus, menandai berakhirnya rangkaian ini pada 180 M.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">212 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Constitutio Antoniniana</h3>
+          <p class="font-body leading-7 mt-2">
+            Maklumat Caracalla memberikan kewarganegaraan Romawi kepada hampir seluruh penduduk merdeka kekaisaran.
+            Banyak sejarawan menilai motif utamanya fiskal, karena warga negara membayar pajak warisan dan pajak pembebasan budak.
+            Kebijakan ini menghapus pembedaan hukum antara Italia dan provinsi, dan secara resmi mengakhiri masa ketika "menjadi Romawi" berarti status istimewa.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="colonnade my-16"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+
+<!-- ============ BAB IV ============ -->
+<section id="bab-4" class="scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12">
+      <div class="banner banner-tyrian w-28 shrink-0 text-center pt-5 pb-12 border-t-4 border-bronze">
+        <div class="font-display text-travertine text-xs tracking-widest">CAPVT</div>
+        <div class="font-display font-black text-4xl text-bronze">IV</div>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-display text-crimson text-xs tracking-[.4em]">165 – 395 M</p>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-charcoal leading-tight mt-1">Krisis, Pembagian, dan Kemunduran</h2>
+        <p class="font-serif italic text-xl text-charcoal/75 mt-3 max-w-3xl">Setengah abad kekacauan, lalu upaya Diocletianus dan Konstantinus menata ulang negara.</p>
+      </div>
+    </div>
+
+    <div class="relative pb-6">
+      <div class="tl-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"></div>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">165 – 180 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Wabah Antonine</h3>
+          <p class="font-body leading-7 mt-2">
+            Penyakit yang dibawa pasukan dari kampanye di Timur menyebar ke seluruh kekaisaran. Galenos, tabib yang hidup pada masa itu, menjadi saksi utama,
+            dan gejalanya yang digambarkan sering diduga sebagai cacar. Estimasi angka kematian beragam dan diperdebatkan, dengan kisaran
+            yang jauh lebih tinggi daripada kerugian perang mana pun pada masa itu. Wabah serupa, wabah Cyprianus, kembali pada pertengahan abad ke-3.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">235 – 284 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Krisis Abad Ketiga</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Pembunuhan Severus Alexander pada 235 M membuka rangkaian kaisar tentara yang naik dan jatuh dalam hitungan bulan,
+            dengan sedikitnya dua puluh pengklaim tahta dalam lima puluh tahun. Di timur, dinasti Sasania di Persia mengalahkan dan menawan Kaisar Valerianus pada 260 M.
+            Kekaisaran terbelah menjadi tiga: Romawi pusat, Kekaisaran Galia di barat (260–274 M), dan Palmyra di timur di bawah Ratu Zenobia.
+            Denarius perak dikurangi kadar peraknya hingga tinggal beberapa persen, dan harga naik tajam. Aurelianus menyatukan kembali ketiganya pada 274 M
+            dan membangun tembok kota Roma yang masih berdiri sebagian hingga kini.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">284 – 305 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Diocletianus dan Tetrarki</h3>
+          <p class="font-body leading-7 mt-2">
+            Diocletianus naik tahta pada 284 M dan menyadari bahwa satu orang tidak bisa memadamkan semua ancaman. Pada 293 M ia membentuk Tetrarki:
+            dua Augustus dan dua Caesar yang masing-masing mengurus satu wilayah. Ia memisahkan komando militer dari administrasi sipil, melipatgandakan jumlah provinsi,
+            dan menerbitkan Edik Harga Maksimum (301 M) yang gagal menahan inflasi. Penganiayaan terhadap umat Kristen yang dimulai 303 M adalah yang terberat dalam sejarah kekaisaran.
+            Ia mengundurkan diri secara sukarela pada 305 M, tindakan yang sangat langka bagi seorang kaisar.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">306 – 337 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Konstantinus dan Konstantinopel</h3>
+          <p class="font-body leading-7 mt-2">
+            Setelah Tetrarki runtuh menjadi perang saudara, Konstantinus I mengalahkan Maxentius di Jembatan Milvius (312 M).
+            Bersama Licinius ia menerbitkan kebijakan toleransi terhadap agama Kristen (313 M, lazim disebut Edik Milan), dan menjadi penguasa tunggal pada 324 M.
+            Konsili Nicea (325 M) ia selenggarakan untuk menyatukan perselisihan doktrin. Pada 330 M, Byzantion di Selat Bosporus diresmikan sebagai Konstantinopel,
+            ibu kota baru yang lebih dekat ke perbatasan Donau dan Persia. Koin emas <em>solidus</em> diterbitkan sebagai mata uang stabil.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2"></span>
+        <div class="inscription p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">376 – 378 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Goth Melintasi Donau dan Adrianopel</h3>
+          <p class="font-body leading-7 mt-2">
+            Terdesak Hun dari timur, kelompok besar Goth meminta izin masuk ke wilayah Romawi pada 376 M. Perlakuan buruk dan eksploitasi pejabat setempat memicu pemberontakan.
+            Pada 9 Agustus 378 M, Kaisar Valens tewas bersama dua pertiga pasukan lapangannya dalam pertempuran Adrianopel.
+            Sejarawan Ammianus Marcellinus menggambarkannya sebagai bencana terburuk sejak Cannae. Goth tidak diusir, dan akhirnya diberi tempat bermukim sebagai sekutu otonom.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2"></span>
+        <div class="inscription inscription-dark p-6">
+          <span class="year-plate inline-block px-3 py-1 text-sm">17 JANUARI 395 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-bronze">Theodosius I dan Pembagian Permanen</h3>
+          <p class="font-body leading-7 mt-2 text-travertine/90">
+            Theodosius I menetapkan kekristenan Nicea sebagai agama negara (380 M) dan merupakan kaisar terakhir yang memerintah seluruh kekaisaran.
+            Ia wafat pada 395 M dan membagi wilayah antara kedua putranya: Arcadius di Timur (Konstantinopel) dan Honorius di Barat.
+            Pembagian administratif sudah sering terjadi sejak Diocletianus, tetapi sesudah 395 M kedua bagian tidak lagi disatukan di bawah satu kaisar secara tetap.
+            Timur memiliki kota-kota lebih padat, pajak lebih besar, dan perbatasan yang lebih mudah dipertahankan.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="colonnade colonnade-dark mt-16"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+
+<!-- ============ BAB V ============ -->
+<section id="bab-5" class="scroll-mt-20 bg-[#1a1a1a] text-travertine">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12">
+      <div class="banner w-28 shrink-0 text-center pt-5 pb-12 border-t-4 border-bronze">
+        <div class="font-display text-travertine text-xs tracking-widest">CAPVT</div>
+        <div class="font-display font-black text-4xl text-bronze">V</div>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-display text-bronze text-xs tracking-[.4em]">406 – 476 M</p>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-travertine leading-tight mt-1">Runtuhnya Romawi Barat</h2>
+        <p class="font-serif italic text-xl text-travertine/75 mt-3 max-w-3xl">Tujuh puluh tahun penyusutan wilayah, pendapatan, dan otoritas yang berakhir di Ravenna.</p>
+      </div>
+    </div>
+
+    <div class="relative pb-6">
+      <div class="tl-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"></div>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal">
+          <span class="year-plate inline-block px-3 py-1 text-sm">31 DESEMBER 406 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Penyeberangan Sungai Rhein</h3>
+          <p class="font-body leading-7 mt-2">
+            Kelompok Vandal, Alan, dan Suebi menyeberangi Rhein yang membeku dan masuk ke Galia. Pertahanan perbatasan tidak berhasil menghentikan mereka,
+            karena sebagian pasukan telah ditarik untuk menghadapi krisis di Italia. Dalam beberapa tahun, mereka merembes ke Hispania, sementara Britania ditinggalkan
+            garnisunnya sekitar 410 M. Sejak saat itu, kendali Romawi di Galia dan Hispania bersifat parsial.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal">
+          <span class="year-plate inline-block px-3 py-1 text-sm">24 AGUSTUS 410 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Alaric Menjarah Roma</h3>
+          <p class="font-body leading-7 mt-2">
+            Raja Visigoth, Alaric, menuntut gaji dan tanah bagi pasukannya. Setelah perundingan dengan istana Honorius di Ravenna gagal,
+            ia memasuki Roma dan menjarahnya selama tiga hari. Kerusakan fisiknya terbatas, tetapi dampak psikologisnya besar,
+            dan Agustinus dari Hippo menulis <em>De Civitate Dei</em> sebagai tanggapan atas tuduhan bahwa kekristenan menyebabkan bencana itu.
+            Visigoth kemudian diberi wilayah di Aquitania sebagai sekutu militer (<em>foederati</em>) pada 418 M.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal">
+          <span class="year-plate inline-block px-3 py-1 text-sm">429 – 439 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Vandal Merebut Afrika Utara</h3>
+          <p class="font-body leading-7 mt-2">
+            Di bawah Gaiseric, sekitar delapan puluh ribu Vandal dan Alan menyeberang dari Hispania ke Afrika pada 429 M dan merebut Kartago pada 439 M.
+            Afrika Utara adalah sumber gandum dan pajak terbesar Romawi Barat. Kehilangannya memotong pendapatan negara tepat ketika biaya tentara meningkat,
+            dan armada Vandal mulai menguasai Mediterania barat.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal">
+          <span class="year-plate inline-block px-3 py-1 text-sm">434 – 455 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Attila, Aetius, dan Pembunuhan di Istana</h3>
+          <p class="font-body leading-7 mt-2">
+            Attila memerintah konfederasi Hun dari 434 M dan memeras upeti besar dari Konstantinopel. Ia memasuki Galia pada 451 M dan dihentikan Flavius Aetius
+            bersama pasukan Visigoth di Dataran Catalaunum. Tahun berikutnya ia menyerbu Italia utara, lalu mundur, dan wafat pada 453 M.
+            Pada 454 M, Kaisar Valentinianus III membunuh Aetius dengan tangannya sendiri. Valentinianus dibunuh pengikut Aetius pada 455 M,
+            dan Gaiseric menjarah Roma selama dua minggu pada tahun yang sama.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:pr-12 mb-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal">
+          <span class="year-plate inline-block px-3 py-1 text-sm">456 – 475 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Para Penentu Kaisar</h3>
+          <p class="font-body leading-7 mt-2">
+            Setelah 455 M, kekuasaan nyata berada pada panglima tertinggi berdarah campuran Romawi-germanik, terutama Ricimer yang mengangkat dan menyingkirkan beberapa kaisar.
+            Kaisar-kaisar Barat menjadi boneka dengan wilayah kendali yang terus mengecil, pada dasarnya terbatas pada Italia dan sebagian Galia selatan.
+            Kaisar Timur, Zeno, mengakui Julius Nepos sebagai penguasa sah Barat, tetapi Nepos diusir dari Italia oleh panglimanya sendiri, Orestes, pada 475 M.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pl-12">
+        <span class="tl-dot absolute top-7 left-4 -translate-x-1/2 md:left-0 md:-translate-x-1/2" style="box-shadow:0 0 0 4px #1a1a1a"></span>
+        <div class="inscription p-6 text-charcoal" style="border-color:#800020">
+          <span class="year-plate inline-block px-3 py-1 text-sm">4 SEPTEMBER 476 M</span>
+          <h3 class="font-display font-bold text-xl mt-3 text-crimson">Odoacer dan Romulus Augustulus</h3>
+          <p class="font-body leading-7 mt-2">
+            Orestes menobatkan putranya yang masih remaja, Romulus Augustus (diejek <em>Augustulus</em>, "Augustus kecil"), pada Oktober 475 M.
+            Pasukan sekutu di Italia, yang dipimpin Odoacer, menuntut sepertiga tanah Italia sebagaimana diterima Visigoth dan Burgundi di Galia. Orestes menolak dan dieksekusi di Placentia pada Agustus 476 M.
+            Pada 4 September, Odoacer menyingkirkan Romulus Augustulus di Ravenna, memberinya pensiun, dan mengirim lambang kekaisaran ke Konstantinopel kepada Zeno.
+            Odoacer memerintah Italia sebagai raja tanpa mengangkat kaisar pengganti. Tahun 476 M lazim dipakai sebagai akhir Kekaisaran Romawi Barat,
+            meskipun Julius Nepos masih diakui secara nominal di Dalmatia hingga ia dibunuh pada 480 M.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Faktor keruntuhan -->
+    <div class="mt-20">
+      <div class="text-center mb-10">
+        <p class="font-display text-bronze text-xs tracking-[.4em]">CAVSAE · PENYEBAB</p>
+        <h3 class="font-display font-black text-3xl sm:text-4xl mt-2">Faktor yang Diperdebatkan</h3>
+        <p class="font-body text-travertine/70 max-w-2xl mx-auto mt-3">Tidak ada konsensus tunggal. Para sejarawan menekankan kombinasi yang berbeda dari faktor-faktor berikut.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="inscription p-6 text-charcoal reveal">
+          <h4 class="font-display font-bold text-lg text-crimson">Ekonomi dan Fiskal</h4>
+          <p class="font-body leading-7 mt-2 text-[15px]">Pajak berat atas petani, debasemen koin, dan hilangnya Afrika Utara pada 439 M mengurangi pendapatan, padahal negara membutuhkan lebih banyak uang untuk membayar tentara. Penurunan perdagangan jarak jauh di Barat juga tercatat dalam temuan arkeologi, seperti berkurangnya keramik impor dan ukuran bangunan.</p>
+        </div>
+        <div class="inscription p-6 text-charcoal reveal">
+          <h4 class="font-display font-bold text-lg text-crimson">Militer</h4>
+          <p class="font-body leading-7 mt-2 text-[15px]">Tentara Barat makin bergantung pada pasukan sekutu non-Romawi yang dibayar dengan tanah atau pajak, sehingga loyalitasnya bersifat transaksional. Kekalahan beruntun, seperti Adrianopel, menghabiskan pasukan lapangan terlatih yang sulit diganti.</p>
+        </div>
+        <div class="inscription p-6 text-charcoal reveal">
+          <h4 class="font-display font-bold text-lg text-crimson">Politik</h4>
+          <p class="font-body leading-7 mt-2 text-[15px]">Perang saudara dan perebutan tahta berulang menyedot sumber daya pada saat perbatasan membutuhkan perhatian. Pergantian kaisar yang sering, pembunuhan jenderal terbaik seperti Aetius, dan kaisar anak-anak mengikis kapasitas pengambilan keputusan.</p>
+        </div>
+        <div class="inscription p-6 text-charcoal reveal">
+          <h4 class="font-display font-bold text-lg text-crimson">Tekanan Eksternal</h4>
+          <p class="font-body leading-7 mt-2 text-[15px]">Gerakan Hun menekan suku-suku Goth dan Germania ke wilayah Romawi. Di timur, Persia Sasania adalah lawan yang terorganisasi, sehingga sumber daya Romawi terpecah. Sejarawan Peter Heather menekankan faktor ini, sementara yang lain menilai tekanan tersebut bisa ditahan oleh negara yang sehat.</p>
+        </div>
+      </div>
+
+      <div class="inscription p-6 sm:p-8 text-charcoal mt-8 reveal">
+        <h4 class="font-display font-bold text-lg text-crimson">Perdebatan Historiografi</h4>
+        <p class="font-body leading-8 mt-2">
+          Edward Gibbon (<em>The Decline and Fall of the Roman Empire</em>, 1776–1789) menekankan hilangnya semangat sipil dan pengaruh kekristenan.
+          Bryan Ward-Perkins memandang peristiwa itu sebagai keruntuhan nyata taraf hidup material. Peter Brown dan para peneliti Antikuitas Akhir lebih menekankan
+          transformasi lembaga, agama, dan budaya, bukan keruntuhan mendadak. Adrian Goldsworthy menyoroti kegagalan politik internal.
+          Penilaian yang paling hati-hati menyatakan bahwa struktur negara di Barat memang runtuh pada abad ke-5, sedangkan banyak hukum, bahasa, dan lembaga gerejawi Romawi bertahan di kerajaan-kerajaan penerusnya.
+        </p>
+      </div>
+
+      <div class="mt-8 border-l-4 border-bronze pl-6 py-2 max-w-3xl mx-auto reveal">
+        <p class="font-serif italic text-xl text-travertine/90 leading-relaxed">
+          Kekaisaran Romawi Timur dengan ibu kota Konstantinopel terus berdiri selama hampir seribu tahun setelah 476 M,
+          hingga kota itu direbut Sultan Mehmed II pada 29 Mei 1453. Warganya menyebut diri mereka <em>Rhomaioi</em>, orang Romawi, sampai akhir.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="colonnade colonnade-dark"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+</section>
+
+<!-- ============ KRONOLOGI ============ -->
+<section id="kronologi" class="scroll-mt-20 max-w-5xl mx-auto px-6 py-20">
+  <div class="text-center mb-10">
+    <p class="font-display text-crimson text-xs tracking-[.4em]">TABVLA CHRONOLOGICA</p>
+    <h2 class="font-display font-black text-3xl sm:text-5xl mt-2">Kronologi Ringkas</h2>
+  </div>
+  <div class="inscription p-2 sm:p-4 overflow-x-auto reveal">
+    <table class="w-full text-left font-body text-[15px]">
+      <thead>
+        <tr class="font-display text-xs tracking-[.25em] text-crimson border-b-2 border-charcoal">
+          <th class="p-3">TAHUN</th><th class="p-3">PERISTIWA</th><th class="p-3 hidden sm:table-cell">FASE</th>
+        </tr>
+      </thead>
+      <tbody class="[&>tr]:border-b [&>tr]:border-charcoal/20 [&>tr:hover]:bg-bronze/15">
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">753 SM</td><td class="p-3">Pendirian tradisional Roma oleh Romulus</td><td class="p-3 hidden sm:table-cell">Monarki</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">509 SM</td><td class="p-3">Tarquinius Superbus diusir, dua konsul pertama</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">451 SM</td><td class="p-3">Hukum Dua Belas Tabel</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">264 SM</td><td class="p-3">Perang Punic Pertama dimulai</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">216 SM</td><td class="p-3">Kekalahan di Cannae</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">146 SM</td><td class="p-3">Kartago dan Korintus dihancurkan</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">107 SM</td><td class="p-3">Reformasi militer Marius</td><td class="p-3 hidden sm:table-cell">Republik</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">49 SM</td><td class="p-3">Caesar menyeberangi Rubicon</td><td class="p-3 hidden sm:table-cell">Republik akhir</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">44 SM</td><td class="p-3">Caesar dibunuh pada 15 Maret</td><td class="p-3 hidden sm:table-cell">Republik akhir</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">31 SM</td><td class="p-3">Pertempuran Aktium</td><td class="p-3 hidden sm:table-cell">Transisi</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">27 SM</td><td class="p-3">Octavianus menerima gelar Augustus</td><td class="p-3 hidden sm:table-cell">Principat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">117 M</td><td class="p-3">Luas wilayah terbesar di bawah Trajanus</td><td class="p-3 hidden sm:table-cell">Principat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">180 M</td><td class="p-3">Marcus Aurelius wafat, akhir Pax Romana</td><td class="p-3 hidden sm:table-cell">Principat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">235 M</td><td class="p-3">Awal Krisis Abad Ketiga</td><td class="p-3 hidden sm:table-cell">Krisis</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">293 M</td><td class="p-3">Diocletianus membentuk Tetrarki</td><td class="p-3 hidden sm:table-cell">Dominat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">330 M</td><td class="p-3">Konstantinopel diresmikan</td><td class="p-3 hidden sm:table-cell">Dominat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">378 M</td><td class="p-3">Valens tewas di Adrianopel</td><td class="p-3 hidden sm:table-cell">Dominat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">395 M</td><td class="p-3">Theodosius I wafat, kekaisaran dibagi permanen</td><td class="p-3 hidden sm:table-cell">Dominat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">410 M</td><td class="p-3">Alaric menjarah Roma</td><td class="p-3 hidden sm:table-cell">Barat akhir</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">439 M</td><td class="p-3">Vandal merebut Kartago</td><td class="p-3 hidden sm:table-cell">Barat akhir</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">451 M</td><td class="p-3">Pertempuran Dataran Catalaunum</td><td class="p-3 hidden sm:table-cell">Barat akhir</td></tr>
+        <tr class="bg-crimson/10"><td class="p-3 font-display font-bold whitespace-nowrap text-crimson">476 M</td><td class="p-3 font-semibold">Odoacer menggulingkan Romulus Augustulus</td><td class="p-3 hidden sm:table-cell">Akhir Romawi Barat</td></tr>
+        <tr><td class="p-3 font-display font-bold whitespace-nowrap">1453 M</td><td class="p-3">Konstantinopel jatuh ke tangan Utsmani</td><td class="p-3 hidden sm:table-cell">Romawi Timur</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-charcoal text-travertine border-t-8 border-bronze">
+  <div class="colonnade colonnade-dark"><div class="entab"></div><div class="shafts"></div><div class="base"></div></div>
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-12 h-12 bg-crimson border-2 border-bronze font-display font-black text-bronze text-sm">SPQR</span>
+        <div class="leading-tight">
+          <p class="font-display text-bronze tracking-[.3em] text-sm">ARCHIVVM</p>
+          <p class="font-display text-travertine/80 tracking-[.2em] text-xs">HISTORIAE ROMANAE</p>
+        </div>
+      </div>
+      <p class="font-body text-sm leading-6 text-travertine/70 mt-4">
+        Ringkasan kronologis sejarah Romawi untuk pembaca umum. Tanggal sebelum sekitar 300 SM bersifat tradisional dan sebagian bergantung pada rekonstruksi para penulis Romawi kemudian.
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-bronze text-xs tracking-[.35em] mb-4">FONTES · RUJUKAN</p>
+      <ul class="font-body text-sm leading-6 text-travertine/80 space-y-2">
+        <li><strong>Sumber primer:</strong> Livius, <em>Ab Urbe Condita</em>; Polybios, <em>Historiai</em>; Caesar, <em>Commentarii</em>; Augustus, <em>Res Gestae</em>; Tacitus, <em>Annales</em>; Ammianus Marcellinus, <em>Res Gestae</em>.</li>
+        <li><strong>Kajian modern:</strong> Mary Beard, <em>SPQR</em> (2015); Adrian Goldsworthy, <em>How Rome Fell</em> (2009); Peter Heather, <em>The Fall of the Roman Empire</em> (2005); Bryan Ward-Perkins, <em>The Fall of Rome and the End of Civilization</em> (2005); Peter Brown, <em>The World of Late Antiquity</em> (1971).</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-bronze text-xs tracking-[.35em] mb-4">INDEX</p>
+      <ul class="font-display text-sm tracking-widest space-y-2 text-travertine/80">
+        <li><a class="hover:text-bronze" href="#bab-1">I · Asal-usul dan Republik Awal</a></li>
+        <li><a class="hover:text-bronze" href="#bab-2">II · Republik dan Ekspansi</a></li>
+        <li><a class="hover:text-bronze" href="#bab-3">III · Principat</a></li>
+        <li><a class="hover:text-bronze" href="#bab-4">IV · Krisis dan Pembagian</a></li>
+        <li><a class="hover:text-bronze" href="#bab-5">V · Keruntuhan Barat</a></li>
+        <li><a class="hover:text-bronze" href="#kronologi">Tabel Kronologi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-bronze/30">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 font-ui text-xs text-travertine/55">
+      <p>Koleksi arsip sejarah · Cat. No. SPQR / 753 SM – 476 M</p>
+      <a href="#atas" class="hover:text-bronze tracking-widest">KEMBALI KE ATAS ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.add('hidden'); btn.setAttribute('aria-expanded', false);
+  }));
+
+  // Animasi muncul saat di-scroll
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('show'));
+  }
+</script>
+</body>
+</html>
